@@ -8,6 +8,7 @@ def solution(numer1, denom1, numer2, denom2):
     
     # 최대공약수 구하기(유클리드 호제법)
     # 반복이 끝나면 a가 최대 공약수
+    # numer = 분자 , denom = 분모
     a, b = numer, denom
     while b:
         a, b = b, a % b
