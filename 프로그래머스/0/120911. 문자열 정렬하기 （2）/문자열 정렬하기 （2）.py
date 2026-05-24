@@ -5,3 +5,5 @@ def solution(my_string):
     for i in range(len(my_string)):
         answer+= my_string[i]
     return answer
+
+# ''.join : return += 안하고 바로 return 에 넣기 
