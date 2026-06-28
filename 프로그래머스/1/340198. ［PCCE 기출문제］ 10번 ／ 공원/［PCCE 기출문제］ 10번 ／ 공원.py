@@ -6,6 +6,7 @@ def solution(mats, park):
     mats = sorted(mats, reverse=True)
     row = len(park)  # 행의 크기 
     col = len(park[0])  # 열의 크기
+    flag = 0 # 성공 : 1, 실패: -1
     
     for mat in mats:
         for i in range(row-mat+1):
@@ -15,7 +16,7 @@ def solution(mats, park):
                 for x in range(mat):
                     for y in range(mat):
                         if park[i+x][j+y] != "-1":
-                            flag = False
-                if flag:
+                            flag = -1
+                if flag == 1:
                     return mat
     return answer
