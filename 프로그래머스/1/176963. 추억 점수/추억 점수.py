@@ -7,7 +7,8 @@ def solution(name, yearning, photo):
     for i in range(len(photo)):
         score = 0
         for people in photo[i]:
-            score += dict.get(people, 0)
+            if people in dict:
+               score += dict[people]
         answer.append(score)
             
     return answer
