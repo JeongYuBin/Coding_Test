@@ -4,6 +4,7 @@ def solution(board, moves):
     
     for move in moves:
         for i in range(len(board)):
+            # move는 1부터 시작하기에, move-1 진행하기
             if board[i][move-1] != 0:
                 basket.append(board[i][move-1])
                 board[i][move-1] = 0
@@ -12,6 +13,7 @@ def solution(board, moves):
                     a = basket[-1]
                     b = basket[-2]
                     if a == b:
+                        # 인형은 2개 터지기에, answer += 2
                         answer += 2
                         basket.pop()
                         basket.pop()
