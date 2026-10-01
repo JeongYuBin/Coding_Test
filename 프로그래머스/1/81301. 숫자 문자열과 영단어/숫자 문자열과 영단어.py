@@ -1,3 +1,11 @@
+def solution(s):
+    word = {"zero":"0", "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6" , "seven":"7", "eight":"8", "nine":"9"}
+    for key in word:
+        value = word[key]
+        s = s.replace(key, value)
+    
+    return int(s) 
+
 # def solution(s):
 #     answer = ''
 #     check = 0
@@ -41,10 +49,10 @@
         
 #     return int(answer)
 
-def solution(s):
+# def solution(s):
     
-    num_dic = {"zero":"0", "one":"1", "two":"2", "three":"3", "four":"4", "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"}
-    for key, value in num_dic.items():
-        s = s.replace(key, value)
+#     num_dic = {"zero":"0", "one":"1", "two":"2", "three":"3", "four":"4", "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"}
+#     for key, value in num_dic.items():
+#         s = s.replace(key, value)
 
-    return int(s)
+#     return int(s)
