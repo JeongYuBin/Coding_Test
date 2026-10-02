@@ -19,7 +19,7 @@ def solution(genres, plays):
         for j in range(len(genres)):
             if genres[j] == key:
                 award.append([plays[j], j])
-        # award 정렬
+        # award 정렬, 첫번째는 내림차순(음수로주기) 두번째는 오름차순
         award.sort(key=lambda x:(-x[0], x[1]))
         
         # 각 장르마다 2개씩 넣기 
